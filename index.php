@@ -179,7 +179,7 @@
         }
         if(sum < min) {min = sum;new_c = Data[i]}
     }
-     var new_d;min=1000000;
+     var new_d;min=100000000;
     for(var i=0;i<100;i++){//換中心
         if(part[i] != 4) continue;
         var sum=0;
