@@ -215,14 +215,13 @@
     PAM(Data[a],Data[b],Data[c],Data[d]);
     document.getElementById('status').innerHTML ="分析結果：<br> 文字、圖片、影片、連結、TAG資料：0代表沒有該屬性，1代表有，按讚數資料：分為四個百分比區間，4為最多(前25%)，1最少(75%之後)";
     for(var i=1;i<5;i++){
-      document.getElementById('status').innerHTML +="<br>第"+i+"分區：<br>文字\t圖片\t影片\t連結\tTAG\t按讚數<br>";
+      document.getElementById('status').innerHTML +="<br>第"+i+"分區：<br><div class=\"btn-group\" role=\"group\" aria-label=\"...\"><button type=\"button\" class=\"btn btn-default\">文字</button><button type=\"button\" class=\"btn btn-default\">圖片</button><button type=\"button\" class=\"btn btn-default\">影片</button><button type=\"button\" class=\"btn btn-default\">連結</button><button type=\"button\" class=\"btn btn-default\">TAG</button><button type=\"button\" class=\"btn btn-default\">按讚數</div><br>";
       for(var key=0;key<100;key++)
         if(part[key] == i)
-          document.getElementById('status').innerHTML += Data[key][0]+'  '+Data[key][1]+' '+Data[key][2]+'  '+Data[key][3]+'  '+Data[key][4]+'  '+Data[key][5]+'<br>';
+          document.getElementById('status').innerHTML += '<div class=\"btn-group\" role=\"group\" aria-label=\"...\"><button type=\"button\" class=\"btn btn-default\">'+Data[key][0]+'</button><button type=\"button\" class=\"btn btn-default\">'+Data[key][1]+'</button><button type=\"button\" class=\"btn btn-default\">'+Data[key][2]+'</button><button type=\"button\" class=\"btn btn-default\">'+Data[key][3]+'</button><button type=\"button\" class=\"btn btn-default\">'+Data[key][4]+' </button><button type=\"button\" class=\"btn btn-default\">'+Data[key][5]+'</div><br>';
       document.getElementById('status').innerHTML +="<br>";
     }
   }
-  
   
   
   
